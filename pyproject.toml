@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "pytorch_lightning_full_recap"
+version = "0.1.0"
+description = "Poetry environment for PyTorch Lightning, transformers and LLM training on macOS (MPS)"
+authors = ["your-name <you@example.com>"]
+license = "MIT"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+# Core training
+pytorch-lightning = "^2.2"
+torchmetrics = "^0.11"
+
+# Transformers / LLM
+transformers = "^4.40"
+accelerate = "^0.22"
+datasets = "^2.12"
+peft = "^0.4"
+safetensors = "^0.4.3"
+sentencepiece = "^0.1.99"
+tokenizers = "^0.20"
+sentence-transformers = "^2.2"
+
+# Utilities
+einops = "^0.6"
+scikit-learn = "^1.3"
+pandas = "^2.0"
+matplotlib = "^3.8"
+seaborn = "^0.12"
+tqdm = "^4.66"
+rich = "^13.3"
+
+# Experiment tracking / tuning
+wandb = "^0.15"
+optuna = "^3.0"
+
+# Jupyter
+jupyterlab = "^4.0"
+notebook = "^7.0"
+ipykernel = "^6.27"
+ipywidgets = "^8.0"
+
+[tool.poetry.dev-dependencies]
+black = "^24.1"
+isort = "^6.0"
+
+[build-system]
+requires = ["poetry-core>=1.5.0"]
+build-backend = "poetry.core.masonry.api"
