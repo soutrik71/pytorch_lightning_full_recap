@@ -205,3 +205,14 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Ignore heavy training logs and checkpoints inside dl-fundamentals
+dl-fundamentals/**/lightning_logs/
+dl-fundamentals/**/checkpoints/
+dl-fundamentals/**/events.out.tfevents.*
+dl-fundamentals/**/metrics.csv
+dl-fundamentals/**/logs/
+dl-fundamentals/**/lightning_logs/**
+dl-fundamentals/**/wandb/
+dl-fundamentals/**/__pycache__/
+dl-fundamentals/**/.ipynb_checkpoints/
