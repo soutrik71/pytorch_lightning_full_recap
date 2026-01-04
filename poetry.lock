@@ -1550,6 +1550,23 @@ doc = ["sphinx (>=7.1.2,<7.2)", "sphinx-autodoc-typehints", "sphinx_rtd_theme"]
 test = ["coverage[toml]", "ddt (>=1.1.1,!=1.4.3)", "mock ; python_version < \"3.8\"", "mypy", "pre-commit", "pytest (>=7.3.1)", "pytest-cov", "pytest-instafail", "pytest-mock", "pytest-sugar", "typing-extensions ; python_version < \"3.11\""]
 
 [[package]]
+name = "graphviz"
+version = "0.21"
+description = "Simple Python interface for Graphviz"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "graphviz-0.21-py3-none-any.whl", hash = "sha256:54f33de9f4f911d7e84e4191749cac8cc5653f815b06738c54db9a15ab8b1e42"},
+    {file = "graphviz-0.21.tar.gz", hash = "sha256:20743e7183be82aaaa8ad6c93f8893c923bd6658a04c32ee115edb3c8a835f78"},
+]
+
+[package.extras]
+dev = ["Flake8-pyproject", "build", "flake8", "pep8-naming", "tox (>=3)", "twine", "wheel"]
+docs = ["sphinx (>=5,<7)", "sphinx-autodoc-typehints", "sphinx-rtd-theme (>=0.2.5)"]
+test = ["coverage", "pytest (>=7,<8.1)", "pytest-cov", "pytest-mock (>=3)"]
+
+[[package]]
 name = "greenlet"
 version = "3.3.0"
 description = "Lightweight in-process concurrent programming"
@@ -6035,6 +6052,18 @@ optree = ["optree (>=0.13.0)"]
 pyyaml = ["pyyaml"]
 
 [[package]]
+name = "torchinfo"
+version = "1.8.0"
+description = "Model summary in PyTorch, based off of the original torchsummary."
+optional = false
+python-versions = ">=3.7"
+groups = ["main"]
+files = [
+    {file = "torchinfo-1.8.0-py3-none-any.whl", hash = "sha256:2e911c2918603f945c26ff21a3a838d12709223dc4ccf243407bce8b6e897b46"},
+    {file = "torchinfo-1.8.0.tar.gz", hash = "sha256:72e94b0e9a3e64dc583a8e5b7940b8938a1ac0f033f795457f27e6f4e7afa2e9"},
+]
+
+[[package]]
 name = "torchmetrics"
 version = "0.11.4"
 description = "PyTorch native Metrics"
@@ -6059,6 +6088,24 @@ image = ["lpips (<=0.1.4)", "scipy (>1.0.0)", "torch-fidelity (<=0.3.0)", "torch
 multimodal = ["transformers (>=4.10.0)"]
 test = ["bert-score (==0.3.13)", "cloudpickle (>1.3)", "coverage (>5.2)", "dython (<=0.7.3)", "fast-bss-eval (>=0.1.0)", "fire (<=0.5.0)", "huggingface-hub (<0.7)", "jiwer (>=2.3.0)", "kornia (>=0.6.7)", "mir-eval (>=0.6)", "mypy (==0.982)", "netcal (>1.0.0)", "pandas (>1.0.0)", "phmdoctest (>=1.1.1)", "psutil (<=5.9.4)", "pypesq (>1.2)", "pytest (>=6.0.0)", "pytest-cov (>2.10)", "pytest-doctestplus (>=0.9.0)", "pytest-rerunfailures (>=10.0)", "pytest-timeout (<=2.1.0)", "pytorch-msssim (==0.2.1)", "requests (<=2.28.2)", "rouge-score (>0.1.0)", "sacrebleu (>=2.0.0)", "scikit-image (>0.17.1)", "scikit-learn (>1.0)", "scipy (>1.0.0)", "torch-complex (<=0.4.3)", "transformers (>4.4.0)", "types-PyYAML", "types-emoji", "types-protobuf", "types-requests", "types-setuptools", "types-six", "types-tabulate"]
 text = ["nltk (>=3.6)", "regex (>=2021.9.24)", "tqdm (>=4.41.0)"]
+
+[[package]]
+name = "torchview"
+version = "0.2.7"
+description = "Visualization of Pytorch Models"
+optional = false
+python-versions = ">=3.8"
+groups = ["main"]
+files = [
+    {file = "torchview-0.2.7-py3-none-any.whl", hash = "sha256:c7f3a9d16138c20b606900ecbf46d01489f2b8c77ed97e71293883bc606c2be0"},
+    {file = "torchview-0.2.7.tar.gz", hash = "sha256:c5898fd03d256333c9827000c1f83e1052fbcfc1066032d86b30d429dd942f7c"},
+]
+
+[package.dependencies]
+graphviz = "*"
+
+[package.extras]
+dev = ["black", "codecov", "isort", "mdformat", "mdformat-mkdocs", "mkdocs", "mkdocs-gen-files", "mkdocs-material", "mkdocs-redirects", "mkdocstrings", "mkdocstrings-python", "mypy", "packaging", "pre-commit", "pycln", "pylint", "pytest", "pytest-cov", "ruff (==0.0.246)"]
 
 [[package]]
 name = "torchvision"
@@ -6106,6 +6153,22 @@ torch = "2.9.1"
 [package.extras]
 gdown = ["gdown (>=4.7.3)"]
 scipy = ["scipy"]
+
+[[package]]
+name = "torchvista"
+version = "0.2.7"
+description = "Interactive PyTorch model visualizer for notebooks"
+optional = false
+python-versions = ">=3.8"
+groups = ["main"]
+files = [
+    {file = "torchvista-0.2.7-py3-none-any.whl", hash = "sha256:f8e5a0b045718d372c05787d648d0b79d500798771eba9904c824f2e17b7e26f"},
+    {file = "torchvista-0.2.7.tar.gz", hash = "sha256:45d26d391a423ad659be4440102a71f6daf0175ffdbfa52857729610896b86a9"},
+]
+
+[package.dependencies]
+ipython = ">=7.0.0"
+numpy = ">=1.18.0"
 
 [[package]]
 name = "tornado"
@@ -6770,4 +6833,4 @@ propcache = ">=0.2.1"
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11,<3.15"
-content-hash = "03987ff286ba8ec81590397babf408e69e6acfdbcc218942cf6ab1c5d9fe8bfb"
+content-hash = "afa3eb3384540f24934b0e8cefcdf0c5806c6276495c787fc7bd828c5f5586fb"

@@ -217,3 +217,4 @@ dl-fundamentals/**/wandb/
 dl-fundamentals/**/__pycache__/
 dl-fundamentals/**/.ipynb_checkpoints/
 mnist-pngs/
+model/
